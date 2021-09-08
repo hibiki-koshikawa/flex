@@ -1,0 +1,20 @@
+<div class="showcase-index-wrapper">
+  <div class="container">
+    <% @showcases.each do |showcase| %>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <li>
+            <%= link_to "新着順", shoowcase_arrival_path(arrival_params) %>
+            <%= link_to "いいね順", shoowcase_like_path(like_params) %>
+          </li>
+          <div class="showcase-index-single">
+            <h2 class="showcase-author">
+              <%= treasure.user.title %>
+            </h2>
+            <%= image_tag showcase.image.url %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

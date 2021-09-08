@@ -2,6 +2,23 @@ h1, h2 {
   font-weight: 100;
 }
 
+body {
+  background-color: #fafafa;
+}
+
+.btn-white {
+  // color: #fff;
+  // border: 1px solid #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  // background-color: rgba(0,0,0,0.0);
+  
+  &:hover {
+    color: #fff;
+  }
+}
+
 form-control {
   height: 45px;
 }
@@ -13,7 +30,7 @@ form-control {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #464646;
+  // background-color: #464646;
 
   .users-new-container {
     padding-top: 220px;
@@ -33,7 +50,7 @@ form-control {
 
 .navbar-transparent {
   margin-bottom: 0px;
-  background-color: rgba(0,0,0,0.5);
+  // background-color: rgba(0,0,0,0.5);
   a {
     color: #fff !important;
   }
@@ -47,3 +64,21 @@ form-control {
     height: 40px;
   }
 }
+
+.btn-black {
+  color: #565656;
+  border: 1px solid #565656;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0.0);
+
+  &:hover {
+    color: #565656;
+  }
+}
+
+.treasure-new-wrapper {
+  padding-top: 120px;
+}
+

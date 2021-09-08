@@ -1,0 +1,19 @@
+<div class="treasure-index-wrapper">
+  <div class="container">
+    <% @treasures.each do |treasure| %>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="treasure-index-single">
+            <h2 class="treasure-author">
+              <%= treasure.user.name %>
+            </h2>
+            <%= image_tag treasure.image.url %>
+            <p class="treasure-text">
+              <%= treasure.description %>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
