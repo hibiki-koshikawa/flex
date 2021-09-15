@@ -15,6 +15,5 @@ Rails.application.routes.draw do
   resources :showcases
   resources :treasures
   
-  get 'favorites/index'
-  post '/favorites', to: 'favorites#create'
+  resources :favorites
 end
