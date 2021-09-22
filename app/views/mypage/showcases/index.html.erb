@@ -1,0 +1,15 @@
+<div class="showcase-index-wrapper">
+  <div class="container">
+    <% @showcases.each do |showcase| %>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="showcase-index-single">
+            <%= link_to show_showcase_path%>
+              <%= image_tag showcase.image.url %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

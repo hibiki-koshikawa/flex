@@ -1,0 +1,16 @@
+<div class="treasure-index-wrapper">
+  <div class="container">
+    <% @treasures.each do |treasure| %>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="treasure-index">
+            <%= link_to "new", new_treasere_path %>
+            <%= link_to "edit", edit_treasere_path %>
+            <%= link_to "delete", showcase_treasere_path, method: :delete %>
+              <%= image_tag treasure.image.url %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="showcase-new-wrapper" >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h1 class="text-center">新しいshowcase</h1>
+        <%= form_with model: @showcase do |f| %>
+          <div class="form-group">
+            <%= f.label :name %>
+            <%= f.file_field :name%>
+          </div>
+
+          <%= f.submit '投稿', class: 'btn btn-black btn-block' %>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
