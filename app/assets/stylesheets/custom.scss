@@ -50,9 +50,9 @@ form-control {
 
 .navbar-transparent {
   margin-bottom: 0px;
-  // background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.5);
   a {
-    color: #fff !important;
+    color: #000 !important;
   }
 
   .navbar-brand {
@@ -78,7 +78,11 @@ form-control {
   }
 }
 
-.treasure-new-wrapper {
+.showcase-index-wrapper {
+  padding-top: 120px;
+}
+
+.showcase-new-wrapper {
   padding-top: 120px;
 }
 

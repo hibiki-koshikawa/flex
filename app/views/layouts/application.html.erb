@@ -16,9 +16,7 @@
     
     <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
       <div class="container">
-        <%= link_to  root_path do %>
-          
-        <% end %>
+        <%= link_to "Flex", root_path  %>
         <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
             <li>
@@ -33,12 +31,13 @@
             </li>
           <% else %>
             <li>
-              <%= link_to new_user_path do %>
-                
-              <% end %>
+              <%= link_to "コレクション一覧", showcases_path  %>
             </li>
             <li>
-              <%= link_to "login", login_path %>
+              <%= link_to "login", login_path  %>
+            </li>
+            <li>
+              <%= link_to "新規登録", new_user_path  %>
             </li>
           <% end %>
         </ul>
