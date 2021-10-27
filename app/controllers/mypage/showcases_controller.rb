@@ -4,8 +4,7 @@ class Mypage::ShowcasesController < ApplicationController
   end
   
   def index
-    @showcases = Showcase.all
-    # @showcases = Showcase.where(user_id: current_user_id).includes(:user)
+    @showcases = Showcase.where(user_id: current_user.id).includes(:user)
   end
   
   def create
@@ -17,6 +16,14 @@ class Mypage::ShowcasesController < ApplicationController
       flash.now[:danger] = "投稿に失敗しました"
       render :new
     end
+  end
+  
+  def current_showcase
+    @current_shocase ||= Showcase.find_by(id: session[:shocase_id])
+  end
+
+  def posted_in?
+    !current_showcase.nil?
   end
   
   private

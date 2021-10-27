@@ -1,11 +1,16 @@
 <div class="showcase-index-wrapper">
   <div class="container">
-    <p><%= @nickname %>さんのページ</p>
+    <p><%= @username %>さんのページ</p>
+    <%= link_to "新しくコレクションを作成する", new_mypage_showcase_path %>
     <%= @showcases.each do |showcase| %>
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <div class="showcase-index-single">
-            <%= link_to mypage_showcases_path(showcase_id: :showcase_id) %>
+            <% if posted_in? %>
+              <%= link_to "a", mypage_showcases_path(showcase_id: :showcase_id) %>
+            <% else %>
+              <p>"まだ投稿されていません"</p>
+            <% end %>
           </div>
         </div>
       </div>
